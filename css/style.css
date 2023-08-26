@@ -1,0 +1,403 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+header {
+  width: 100%;
+}
+/* Website Logo */
+.logo {
+  padding: 0.5rem 1.5rem;
+  position: fixed;
+  z-index: 9999;
+}
+.logo img {
+  height: 50px;
+}
+/* Navigation Section */
+nav.navbar-container {
+  padding: 0.5rem 1.5rem;
+  background-color: rgb(255, 255, 255, 0.99);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+nav.navbar-container .navbar-list ul {
+  display: flex;
+  gap: 1rem;
+}
+nav.navbar-container .navbar-list li {
+  list-style-type: none;
+}
+nav.navbar-container .navbar-list li a {
+  padding: 0.5rem 1.5rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+nav.navbar-container .navbar-list li a:hover {
+  font-weight: 700px;
+  background-color: #2e2e2e;
+  color: white;
+}
+/* Automatic Hero Image Slider */
+.hero-img {
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+.hero-img .slider {
+  display: none;
+}
+.hero-img .slider img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.hero-img .judul {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+.hero-img .judul h1 {
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  font-weight: 700px;
+  font-size: 5rem;
+  text-align: center;
+}
+/* Main Section */
+main {
+  padding: 1.5rem 12rem;
+  display: inline-block;
+}
+/* Line Decoration */
+.decoration {
+  height: 6px;
+  width: 25%;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  align-self: center;
+  transition: 0.3s all ease-in-out;
+}
+.decoration:hover {
+  background-color: maroon;
+  width: 50%;
+}
+/* Content Section */
+#content {
+  flex: 1 100%;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1.5rem;
+}
+.card {
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 1rem 3.5rem 1.5rem;
+}
+.card h2 {
+  font-size: 2rem;
+  border-left: 3px solid red;
+  padding-left: 8px;
+  transition: 0.5s all ease-in-out;
+}
+.card h2:hover {
+  cursor: default;
+  border-color: maroon;
+  padding-left: 20px;
+}
+.card h3 {
+  font-size: 1.5rem;
+  color: red;
+}
+.card .article-img {
+  max-height: 500px;
+  overflow: hidden;
+}
+.card .banner {
+  height: 150px;
+  width: 100%;
+  background-color: red;
+}
+/* Kuliner Section */
+.menu-kuliner {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+}
+.card-menu h3 {
+  border-bottom: 2px solid red;
+  color: black;
+  margin: 0.5rem 4rem;
+  font-size: 14px;
+  text-align: center;
+}
+.card-menu p {
+  margin: 0 1rem 1.5rem;
+  font-size: 12px;
+  text-align: center;
+}
+.card-menu {
+  width: 100%;
+  box-shadow: 4px 4px 2px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  transition: 0.25s all ease-in-out;
+}
+.card-menu:hover {
+  box-shadow: 6px 6px 4px 4px rgba(190, 0, 0, 0.2);
+}
+.kuliner-img {
+  height: 150px;
+  overflow: hidden;
+}
+.kuliner-img img {
+  height: 150px;
+  width: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.card .article-img img {
+  max-height: 500px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.5s all ease-in-out;
+}
+.card .article-img:hover img {
+  transform: scale(1.1);
+}
+/* Asside Profil Section */
+.card-asside {
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.card-asside .banner-profile {
+  height: 100px;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  background-color: rgb(211, 9, 9);
+}
+.card-asside .profile {
+  display: flex;
+  align-items: center;
+  height: 200px;
+  margin-left: 3rem;
+  position: absolute;
+}
+.card-asside .profile img {
+  border-radius: 99px;
+  border: 4px solid whitesmoke;
+  width: 100px;
+}
+.card-asside .identitas {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  height: 200px;
+  margin-left: 11rem;
+  position: absolute;
+}
+.card-asside .identitas h2,
+.card-asside .identitas p {
+  color: white;
+  line-height: 1px;
+}
+.card-asside .identitas h3,
+.card-asside .identitas p span {
+  font-size: 12px;
+  color: black;
+}
+/* Footer Section */
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #2e2e2e;
+  border-top: 1px solid #010101;
+  margin-top: 3rem;
+  padding: 1.5rem 2rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 998;
+}
+footer p {
+  color: #fff;
+}
+/* Media Query Max 1200px */
+@media screen and (max-width: 1200px) {
+  main {
+    padding: 18px;
+  }
+  .card {
+    padding: 1rem 2rem 1.5rem;
+  }
+}
+/* Media Query Max 768px */
+@media screen and (max-width: 768px) {
+  nav.navbar-container {
+    padding: 0.5rem 1rem;
+  }
+  .hero-img {
+    height: 70vh;
+  }
+  .hero-img .judul {
+    top: 25%;
+  }
+  main {
+    padding: 16px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 14px;
+  }
+  .decoration {
+    display: none;
+  }
+  .card {
+    padding: 1rem;
+  }
+  .card .article-img img {
+    max-height: 300px;
+  }
+  .card-menu h3 {
+    margin: 0.5rem 2rem;
+  }
+  .card-menu p {
+    margin: 0 0.5rem 1rem;
+  }
+}
+/* Media Query Max 600px */
+@media screen and (max-width: 600px) {
+  /* Navigation*/
+  .logo {
+    margin-top: 0.5rem;
+  }
+  .logo img {
+    height: 40px;
+  }
+  nav.navbar-container {
+    padding: 0.5rem;
+  }
+  nav.navbar-container .navbar-list li a {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  nav.navbar-container .navbar-list ul {
+    gap: 0.5rem;
+  }
+  .logo {
+    padding: 0.5rem;
+  }
+  .hero-img {
+    height: 50vh;
+  }
+  .hero-img .judul {
+    top: 20%;
+  }
+  .hero-img .judul h1 {
+    font-weight: 400px;
+    font-size: 2rem;
+  }
+  main {
+    padding: 14px;
+  }
+  .card {
+    padding: 1rem;
+  }
+  .card .article-img img {
+    max-height: 100px;
+  }
+  .menu-kuliner {
+    flex-flow: column nowrap;
+  }
+  .card-menu h3 {
+    margin: 0.3rem 1rem;
+  }
+  .card-menu p {
+    margin: 0 0.3rem 1rem;
+  }
+  .card-asside .identitas h2 {
+    font-size: 18px;
+  }
+  .card-asside .identitas h3 {
+    font-size: 12px;
+  }
+  .card-asside .identitas p,
+  .card-asside .identitas p span {
+    font-size: 10px;
+  }
+  .card-asside .profile img {
+    scale: 0.8;
+  }
+}
+/* Media Query Max 400px */
+@media screen and (max-width: 400px) {
+  .card h2 {
+    font-size: 1.5rem;
+  }
+  .card h3 {
+    font-size: 1.3rem;
+  }
+  .card-asside .profile img {
+    scale: 0.6;
+  }
+  .card-asside {
+    height: 120px;
+  }
+  .card-asside .banner-profile {
+    height: 60px;
+  }
+  .card-asside .profile,
+  .card-asside .identitas {
+    height: 120px;
+  }
+  .card-asside .profile {
+    margin-left: 0.5rem;
+  }
+  .card-asside .identitas {
+    margin-left: 6rem;
+  }
+  .card-asside .identitas h2 {
+    font-size: 16px;
+  }
+  .card-asside .identitas h3 {
+    font-size: 10px;
+  }
+  .card-asside .identitas p,
+  .card-asside .identitas p span {
+    font-size: 8px;
+  }
+}
